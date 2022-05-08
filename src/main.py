@@ -37,7 +37,6 @@ class Pipeline(object):
 
         df_additional = additional_data.get_dataframe()
         df_extracted = df.merge(df_additional, on=key, how="left")[df_additional.columns]
-        import ipdb;ipdb.set_trace()
         if isinstance(additional_data, Funding):
             [key] = key
             group = "funding_rounds"
